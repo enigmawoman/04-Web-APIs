@@ -1,0 +1,23 @@
+body {
+    background-color: grey;
+}
+
+
+.choice {
+    display: block;
+}
+
+/* utility class */
+
+.hide {
+    display: none;
+}
+
+#flex-container {
+    display: flex;
+    
+}
+
+.flex-item{
+    flex-grow: 2;
+}
