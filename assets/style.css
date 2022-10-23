@@ -1,9 +1,23 @@
-body {
-    background-color: grey;
+:root {
+    --dark: purple;
+    --light: white;
+    --mid: pink;
+    --mid-2: lightblue;
+    --darkgrey: rgb(67, 67, 67)
+  }
+
+html, body {
+    margin: 0;
+    height: 100%;
+    
 }
 
 header {
     text-align: center;
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 30px;
 }
 
 main {
@@ -20,12 +34,49 @@ header div {
     align-items: center;
 }
 
+button {
+    background-color: var(--dark);
+    color: var(--light);
+    border-color: var(--darkgrey);
+    padding: 5px;
+    box-shadow: ;
+}
+
+#style-bg{
+    box-sizing: border-box;
+    background-color: grey;
+    background-image: url(/assets/images/pexels-luis-gomes-546819.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+}
+
+#game-homepage {
+    background-color: antiquewhite;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+main div .ques {
+
+padding: 20px;
+}
+
+#quiz {
+    background-color: antiquewhite;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 30px;
+}
 
 #options {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
 }
 
 
@@ -33,15 +84,7 @@ header div {
     display: block;
 }
 
-/* utility class */
 
-.hide {
-    display: none;
-}
-
-.view {
-    display: flex;
-}
 
 
 /* example from ryan */
