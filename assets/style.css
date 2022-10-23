@@ -2,6 +2,32 @@ body {
     background-color: grey;
 }
 
+header {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 
 .choice {
     display: block;
@@ -13,11 +39,17 @@ body {
     display: none;
 }
 
-#flex-container {
+.view {
+    display: flex;
+}
+
+
+/* example from ryan */
+/* #flex-container {
     display: flex;
     
 }
 
 .flex-item{
     flex-grow: 2;
-}
+} */
