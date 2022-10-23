@@ -31,44 +31,31 @@ var playAgain = document.getElementById("play-again")
 
 var highScoresBtn = document.getElementById("home-scores")
 
-var scoresPage = document.getElementById("score-page")
-//var tableScore = document.getElementById("table-score")
-var quizHome = document.getElementById("quiz-home")
+
+
 
 var secondsRemaining = 0;
 var score = 0;
 var currentQues = 0;
 var timerCountdown;
-const NO_OF_HIGH_SCORES = 10;
-const HIGH_SCORES = "high-scores";
-const highScoreString = localStorage.getItem(HIGH_SCORES);
-const highScores = JSON.parse(highScoreString) ?? [];
 
 
 
 
 function init () {
+
     gameHomepage.style.display = 'block';    
     gameOver.style.display = 'none'; 
     timerTitle.style.display = 'none';
-    scoresPage.style.display = 'none';
+    //scoresPage.style.display = 'none';
     highScoresBtn.style.display = 'block';
-
-
+    quiz.style.display = 'none';   
 }
 
 init();
 
 
-function checkHighScore(score) {
-    const highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
-    const lowestScore = highScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
-    
-    if (score > lowestScore) {
-      saveHighScore(score, highScores); // TODO
-      showHighScores(); // TODO
-    }
-  }
+
 
 function endGame() {
 
@@ -89,105 +76,39 @@ function endGame() {
         results.textContent = "You scored " + score + "/5 CONGRATULATIONS 🎉"
     };
    
-    checkHighScore(account.score);
 
 }
 
- function saveHighScore(score, highScores) {
+ function onSaveScore(e) {
 
     results.style.display = 'none';
 
-     const userInitials = document.getElementById("user-initials").value;
-     
+     var userInitials = document.getElementById("user-initials").value
 
-     if (userInitials == ""){
-        window.alert("You must enter a user initials")
-        saveHighScore();
-     } else {
-        const newScore = { score, userInitials };
-        highScores.push(newScore);
-        highScores.sort((a, b) => b.score - a.score);
-        highScores.splice(NO_OF_HIGH_SCORES);
-        localStorage.setItem(HIGH_SCORES, JSON.stringify(highScores));
-    };
-    
-    
-    
-    
-    
-        //      localStorage.setItem(userInitials, score);
-    //  }
-    //  document.getElementById("user-initials").value = "";
-    // userInitials = userInitials.toUpperCase();  
+     if (userInitials !== ""){
+         localStorage.setItem(userInitials, score);
+     }
+     document.getElementById("user-initials").value = ""; 
 
-    // initialsRecord.textContent = userInitials + " scored " + score + "  ";
-        
+    initialsRecord.textContent = userInitials + " scored " + score + "  ";
+
+      e.preventDefault();  
  }
 
 function onSeeScores() {
 
-    gameHomepage.style.display = 'none';
-    quiz.style.display = 'none';
-    gameOver.style.display = 'none';
-    scoresPage.style.display = 'block';
-    highScoresBtn.style.display = 'none'
+// gameHomepage.style.display = 'none';
+// quiz.style.display = 'none';
+// gameOver.style.display = 'none';
+// scoresPage.style.display = 'block';
+// highScoresBtn.style.display = 'none'
 
-const highScores = JSON.parse(localStorage.getItem(HIGH_SCORES)) ?? [];
-const highScoreList = document.getElementById("highScores");
 
-highScoreList.innerHTML = highScores
-    .map((score) => `<li>${score.score} - ${score.name}`)
-    .join('');
+  window.location.href = 'scoreboard.html';
+
+
+}
     
-
-    //   var displayResults = [];
-    //   console.log(displayResults);
-     
-    
-    //  for (var i=0; i < localStorage.length; i++) {
-
-    //     var initials = localStorage.key(i);
-    //     var numbers = localStorage.getItem(initials);
-
-    //     displayResults.push({ initials, numbers });
-    //     document.getElementById("table-score").textContent = displayResults;
-    // }
-
-    
-
-    // for (var i=0; i < localStorage.length; i++) {
-
-    //     var initials = localStorage.key(i);
-    //     var numbers = localStorage.getItem(initials);
-        
-    //     var displayResults = document.createElement("div");
-    //        displayResults.classList.add('display-result');
-    
-    //        tableScore.appendChild(displayResults);
-    
-    //        displayResults.textContent = initials + " " + numbers;
-
-        
-    }
-    
-
-
-
-
-
-    //   var displayResults = document.createElement("div");
-    //   displayResults.classList.add('display-result');
-
-    //   tableScore.appendChild(displayResults);
-
-    //   displayResults.textContent = initials + " " + numbers;
-
-
-
-       // tableScore.textContent = initials + numbers;
-
-   
-
 
 
 
@@ -248,10 +169,8 @@ function showQuestion() {
 
 function runGame() {
 
-    // so this is to hide the welcome "div" once the game loads - ref back to the .hide in css
-
-
-
+    
+    
     secondsRemaining = 59;
 
     currentQues = -1;
@@ -281,8 +200,8 @@ function runGame() {
 }
 
 startQuiz.addEventListener("click", runGame);
-saveScore.addEventListener("click", saveHighScore);
+saveScore.addEventListener("click", onSaveScore);
 playAgain.addEventListener("click", runGame);
 seeScores.addEventListener("click", onSeeScores);
 highScoresBtn.addEventListener("click", onSeeScores);
-quizHome.addEventListener("click", init);
+//quizHome.addEventListener("click", init);

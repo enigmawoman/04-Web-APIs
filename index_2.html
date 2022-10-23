@@ -9,11 +9,11 @@
 </head>
 
 
-<body>
+<body id="style-bg">
     <header>
         <h1> Coding Quiz </h1>
         <div>
-            <button id="home-scores"> High Scores </button>
+            <button href=scoreboard.html id="home-scores"> High Scores </button>
             <h2 id="timer-title">There are <span id="timer-count"></span> seconds remaining</h2>
         </div>
         
@@ -24,14 +24,14 @@
             <button id="start-quiz">Get Started</button>
         </div>
         <div id="quiz">
-            <div id="question">
+            <div class="ques" id="question">
 
             </div>
-            <div id="options">
+            <div class="ques" id="options">
                 
 
             </div>
-            <div id="message">
+            <div class="ques" id="message">
 
             </div>
         </div>
@@ -39,17 +39,11 @@
             <div id="results"></div>
             <div id="initials-record"></div>
             <button id="see-scores">See highscores</button>
-            <input type="text" id="user-initials" placeholder="Enter your initials here..."/>
+            <input type="text" id="user-initials" placeholder="Enter your initials here..." oninput="this.value = this.value.toUpperCase()"/>
             <button id="save-score">Save my Score</button>
             <button id="play-again">Play again</button>
         </div>
-        <div id="score-page">
-            <p>High Scores</p>
-            <ol id="high-scores">
-
-            </ol>
-            <button id="quiz-home">Quiz Home</button>
-        </div>
+      
 
     </main>
     
