@@ -45,7 +45,6 @@ I have also tried to use correct semantic structure within the HTML and CSS file
 ## Screenshot of the finished website 
 
 ![Online Coding Quiz Home](./assets/images/screenshotQuiz.png)
-![Online Coding Quiz Game](./assets/images/screenshotQuiz2.png)
 
 
 ## License
