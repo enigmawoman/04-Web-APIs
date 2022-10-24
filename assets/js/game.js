@@ -44,18 +44,18 @@ init();
 
 // the following 3 functions define the soundeffects and pull the files in from the assets folder
 function playSoundCorrect() {
-    let correct = new Audio ('/assets/sfx/correct.wav');
+    let correct = new Audio ('./assets/sfx/correct.wav');
     correct.play();
 }
 
 
 function playSoundIncorrect() {
-    let incorrect = new Audio ('/assets/sfx/incorrect.wav');
+    let incorrect = new Audio ('./assets/sfx/incorrect.wav');
     incorrect.play();
 }
 
 function playEndSound() {
-    let playEnd = new Audio ('/assets/sfx/tadaa-47995.mp3');
+    let playEnd = new Audio ('./assets/sfx/tadaa-47995.mp3');
     playEnd.play();
 
 }

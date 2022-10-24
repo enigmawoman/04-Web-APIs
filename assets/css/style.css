@@ -54,7 +54,7 @@ button {
 #style-bg{
     box-sizing: border-box;
     background-color: grey;
-    background-image: url(/assets/images/pexels-luis-gomes-546819.jpg);
+    background-image: url(../images/pexels-luis-gomes-546819.jpg);
     background-size: cover;
     background-position: center center;
     background-blend-mode: multiply;
