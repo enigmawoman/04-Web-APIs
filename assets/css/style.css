@@ -1,0 +1,145 @@
+/* seeting the colour variables for the site */
+:root {
+    --dark: purple;
+    --light: white;
+    --mid: pink;
+    --mid-2: lightblue;
+    --darkgrey: rgb(67, 67, 67)
+  }
+/* setting the overall margin and height and font family for the site - font is from google fonts and defined in the HTML head */
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'IBM Plex Mono', monospace;
+}
+/* setting the design for the header element */
+header {
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 30px;
+}
+/* setting the main element container as flex */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/* defining the div contining the highscores button and timer as a container and to display the items as flex */
+header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* setting the design for all the buttons across the site */
+button {
+    background-color: var(--dark);
+    color: var(--light);
+    border-color: var(--darkgrey);
+    padding: 5px;
+    box-shadow: 2px 2px var(--darkgrey) ;
+    border-radius: 3px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+/* setting the space around the highscores button in the header */
+#home-scores{
+    margin-left:30px;
+    margin-bottom: 5px;
+}
+/* this is defining how the background image should display within the body of the HMTL */
+#style-bg{
+    box-sizing: border-box;
+    background-color: grey;
+    background-image: url(/assets/images/pexels-luis-gomes-546819.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+}
+/* setting the style of the welcome to the quiz */
+#game-homepage {
+    background-color: antiquewhite;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 30px;
+}
+/* providing some padding around the display of the questions, options and message */
+main div .ques {
+    padding: 20px;
+}
+/* setting the overall style for the main quiz div */
+#quiz {
+    background-color: antiquewhite;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 30px;
+}
+
+/* this is to align the buttons defined by .choice and created in the JavaScript file */
+#options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;   
+}
+
+/* making the wright or wrong message larger font  */
+#message{
+    font-size: larger;
+}
+
+/* this will turn the inline button elements into block elements */
+.choice {
+    display: block;
+    margin: 3px;
+}
+
+/* icreasing the size of the timer numbers so they can be easily seen against the text either side */
+#timer-count{
+    font-size: larger;
+}
+
+/* setting the style of the game over elements */
+#game-over{
+    background-color: antiquewhite;
+    margin: 50px;
+    padding: 25px;
+    border-radius: 30px;
+}
+
+/* increasing the padding around results message */
+#results{
+    padding:20px
+}
+#end-options{
+    padding:20px;
+}
+/* matching the text inside the input box to match the over all font of the site */
+#user-initials {
+    font-family: 'IBM Plex Mono', monospace;
+}
+/* setting the style of the scores page */
+#score-page {
+    background-color: antiquewhite;
+    margin: 50px;
+    padding: 25px;
+    border-radius: 30px;
+}
+/* setting the style and layout of the highscores pulled from local storage */
+.display-result{
+    display: block;
+    margin-bottom: 8px;
+    padding: 3px;
+    background-color: var(--dark);
+    color:var(--light);
+    border-radius: 10px;
+}
+
+#page-button{
+    padding: 20px;
+}
+

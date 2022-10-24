@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Quiz</title>
-    <link rel= "stylesheet" href="./assets/style.css"></link>
+    <title>The Greatest Coding Quiz</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon_io (1)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io (1)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon_io (1)/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" href="./assets/css/reset.css"></link>
+    <link rel= "stylesheet" href="./assets/css/style.css"></link>
 </head>
 
 
-<body>
+<body id="style-bg" alt="background image showing a laptop that is displaying computing code across the screen">
     <header>
-        <h1> Coding Quiz </h1>
+        <h1> 💻 Coding Quiz 💻 </h1>
+        <p>Test your coding skills!</p>
         <div>
-            <button id="home-scores"> High Scores </button>
+            <button href=scoreboard.html id="home-scores"> High Scores </button>
             <h2 id="timer-title">There are <span id="timer-count"></span> seconds remaining</h2>
         </div>
         
@@ -24,45 +30,34 @@
             <button id="start-quiz">Get Started</button>
         </div>
         <div id="quiz">
-            <div id="question">
+            <div class="ques" id="question">
 
             </div>
-            <div id="options">
+            <div class="ques" id="options">
                 
 
             </div>
-            <div id="message">
+            <div class="ques" id="message">
 
             </div>
         </div>
         <div id="game-over">
             <div id="results"></div>
-            <div id="initials-record"></div>
-            <button id="see-scores">See highscores</button>
-            <input type="text" id="user-initials" placeholder="Enter your initials here..."/>
-            <button id="save-score">Save my Score</button>
-            <button id="play-again">Play again</button>
+            <div id="end-options">
+                <div id="initials-record"></div>
+                <button id="see-scores">See highscores</button>
+                <input type="text" id="user-initials" placeholder="Your initials here.." oninput="this.value = this.value.toUpperCase()"/>
+                <button id="save-score">Save my Score</button>
+                <button id="play-again">Play again</button>
+            </div>
+           
         </div>
-        <div id="high-scores">
-            <p>High Scores</p>
-            <ol id="table-score">
-
-            </ol>
-            <button id="quiz-home">Quiz Home</button>
-        </div>
+      
 
     </main>
-    
-    <!-- example from ryan -->
-    <!-- <div id="flex-container">
-        <div class="flex-item">Item 1</div>
-        <div class="flex-item"> Item 2</div>
-        <div class="flex-item">Item 3</div>
-
-
-    </div> -->
   
-</body >
+</body>
+
 <script src="assets/js/questions.js"></script>
 <script src="assets/js/game.js"></script>
 </html>
